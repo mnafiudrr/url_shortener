@@ -37,7 +37,7 @@ class ShortenerController extends Controller
 
         return response()->json([
             "data" => [
-                "generated_url" => $data->generated_url,
+                "generated_url" => url('/').'/'.$data->generated_url,
                 "actual_url" => $data->actual_url
             ],
             "meta" => [
